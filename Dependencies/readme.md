@@ -30,3 +30,13 @@ To install them on Unity we use Unity Package Manager, select the `+` button and
 1. System Core
 2. Steamworks.NET
 3. Toolkit for Steamworks SDK Foundation
+
+### Update your manifest
+Finally ... lets edit our Manifest so that team members that use this wont have to update the package paths ... to do that open `Unity/MyUnityProject/Package/manifest.json` and update the paths to make them `relative` such as
+```json
+{
+  "dependencies": {
+    "com.heathen.steamworksfoundation": "file:../../../Dependencies/com.heathen.steamworksfoundation",
+    "com.heathen.systemcore": "file:../../../Dependencies/com.heathen.systemcore",
+    "com.rlabrecque.steamworks.net": "file:../../../Dependencies/com.rlabrecque.steamworks.net",
+`
